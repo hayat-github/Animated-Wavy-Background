@@ -1,0 +1,31 @@
+
+body {
+    height: 2000px;
+}
+.page {
+    height: 100vh;
+}
+
+.page::before {
+    content: "";
+    position: fixed;
+    background-color: rgb(2, 162, 242);
+    width: 2500px;
+    height: 500px;
+    border-radius: 50%;
+    left: 50%;
+    top: 70%;
+    transform: translateX(-50%) skew(0deg , -10deg);
+    animation: vague 10s infinite alternate;
+}
+
+
+
+@keyframes vague {
+    from {
+        transform: translateX(-50%) skew(0deg , -10deg);
+    }
+    to {
+        transform: translateX(-50%) skew(50deg , 0deg);
+    }
+}
